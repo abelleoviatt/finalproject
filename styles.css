@@ -1,6 +1,6 @@
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, h2, h3, ul, aside {
+aside, body, footer, h1, h2, h3, header, img, main, nav, ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -17,9 +17,6 @@ bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
 	display: inline;
 }
 
-.search-fullscreen-wrapper .search-fullscreen-form #searchsubmit {
-    display: none;
-}
 
 /* Set background color and z-index of preloader */
 #preloader {
@@ -43,22 +40,22 @@ bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
 }
 
 /* Hide all elements on  page while it is loading */
-body.loading * {
+.loading  {
   pointer-events: all;
 }
 
 /* Show preloader but allow pointer events on it while the page is loading so gif can be downloaded/copied */
-body.loading #preloader {
+.loading #preloader {
   opacity: 1;
   pointer-events: all;
 }
 
 /* Hide preloader but allow pointer events on all elements once page has loaded */
-body.loaded #preloader {
+.loaded {
   opacity: 0;
   pointer-events: all;
 }
 
-p {
+h1 {
     color: yellow;
   }
