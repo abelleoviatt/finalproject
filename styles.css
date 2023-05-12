@@ -24,7 +24,10 @@ h1 {
   p {
     color: #fff;
     text-align: center;
+    font-size: 50px;
   }
+
+  
 
 
   body {
@@ -53,7 +56,7 @@ h1 {
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #04AA6D;
+  background-color: #954C9B;
   color: white;
 }
 
