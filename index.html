@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <link rel="icon" type="image/png" href="images/faviconblock1.png">
-        <title>Timed Action Example</title>
-        <style>
-          #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #E0D0E6;
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 3.5s ease-in-out;
-          }
-          #preloader img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-          body.loading * {
-            pointer-events: none;
-          }
-          body.loading #preloader {
-            opacity: 1;
-            pointer-events: all;
-          }
-          body.loaded #preloader {
-            opacity: 0;
-            pointer-events: none;
-          }
-        </style>
-        <script>
-          window.onload = function() {
-            var body = document.getElementsByTagName("body")[0];
-            body.classList.add("loaded");
-          };
-        </script>
-      </head>
-      <body class="loading">
-        <div id="preloader">
-          <img src="images/dapurpL.gif" alt="Loading" >
+    <title>Andrea Oviatt Portfolio Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Set background color and z-index of preloader */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E0D0E6;
+        z-index: 999;
+        opacity: 1;
+        transition: opacity 3.7s ease-in-out;
+      }
+      
+      /* Position the preloader image in center of screen */
+      #preloader img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      /* Hide all elements on  page while it is loading */
+      body.loading * {
+        pointer-events: all;
+      }
+      
+      /* Show preloader but allow pointer events on it while the page is loading so gif can be downloaded/copied */
+      body.loading #preloader {
+        opacity: 1;
+        pointer-events: all;
+      }
+      
+      /* Hide preloader but allow pointer events on all elements once page has loaded */
+      body.loaded #preloader {
+        opacity: 0;
+        pointer-events: all;
+      }
+      
+    </style>
+    <script>
+      window.onload = function() {
+        /* Add loaded class to the body element once the page has fully loaded */
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("loaded");
+      };
+    </script>
+  </head>
+  <body class="loading">
+    <!-- Only display preloader on the homepage -->
+    <div id="preloader">
+      <img src="images/dapurpL.gif" alt="Loading...">
+    </div>
+        
+    <script>
+      if (window.location.pathname == "/") {
+        // If on homepage, remove the loading class from the body to hide the preloader
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("loading");
+      }
+    </script>
+  </body>
 
-        </div>
-
-      </body>
-
-      <H1> WHATS UP YALL </H1>
-    </html>
+ 
+</html>

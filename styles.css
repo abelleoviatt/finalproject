@@ -1,46 +1,64 @@
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, h3, ul, aside {
+body, header, nav, main, footer, img, h1, h2, h3, ul, aside {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+/* CSS Reset for HTML 5 */
+article, audio, command, details, dialog, embed, 
+figcaption, figure, hgroup, menu, section, summary,
+video, wbr {
+	display: block;
+}
+
+bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
+	display: inline;
 }
 
 .search-fullscreen-wrapper .search-fullscreen-form #searchsubmit {
     display: none;
 }
 
-/* 24. Preloader */
-/* Loader */
-.mask {
-    background-color: #FFFFFF;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    z-index: 100000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
+/* Set background color and z-index of preloader */
 #preloader {
-    height: 32px;
-    left: 50%;
-    margin: -16px 0 0 -20px;
-    position: absolute;
-    top: 50%;
-    width: 40px;
-}
-#preloader-image {
-  height: auto;
-  left: auto;
-  top: 50%;
-  margin: 0;
-  position: inherit;
-  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-color: #E0D0E6;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 3.7s ease-in-out;
 }
 
-#preloader-image img {
-    width: 80px;
+/* Position the preloader image in center of screen */
+#preloader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+/* Hide all elements on  page while it is loading */
+body.loading * {
+  pointer-events: all;
+}
+
+/* Show preloader but allow pointer events on it while the page is loading so gif can be downloaded/copied */
+body.loading #preloader {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Hide preloader but allow pointer events on all elements once page has loaded */
+body.loaded #preloader {
+  opacity: 0;
+  pointer-events: all;
+}
+
+p {
+    color: grey;
+  }
