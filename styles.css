@@ -17,45 +17,10 @@ bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
 	display: inline;
 }
 
-
-/* Set background color and z-index of preloader */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #E0D0E6;
-  z-index: 999;
-  opacity: 1;
-  transition: opacity 3.7s ease-in-out;
-}
-
-/* Position the preloader image in center of screen */
-#preloader img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Hide all elements on  page while it is loading */
-.loading  {
-  pointer-events: all;
-}
-
-/* Show preloader but allow pointer events on it while the page is loading so gif can be downloaded/copied */
-.loading #preloader {
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* Hide preloader but allow pointer events on all elements once page has loaded */
-.loaded {
-  opacity: 0;
-  pointer-events: all;
-}
-
 h1 {
-    color: yellow;
+    color: green;
   }
+
+  body {
+    background-color: #000;
+ }
