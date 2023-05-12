@@ -21,6 +21,12 @@ h1 {
     color: #974F9D;
   }
 
+  p {
+    color: #fff;
+    text-align: center;
+  }
+
+
   body {
     background-color: #000;
  }
