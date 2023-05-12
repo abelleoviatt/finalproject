@@ -1,21 +1,31 @@
 <!DOCTYPE html>
- <html lang="en"> 
+<html lang="en">
 
 <head>
     <title> BREAD </title>
     <link rel="icon" type="image/png" href="images/faviconblock1.png">
+    <script>
+        window.onload = function() {
+          var image = document.getElementById("my-image");
+          setTimeout(function() {
+            image.style.opacity = "0";
+          }, 1000);
+        };
+      </script>
     </head>
 
 
     <!-- Preloader -->
     <div class="mask">
         <div id="preloader-image">
-        <div class="preloader-image"><img src="images/dapurpL.gif" alt="Loading..."/></div>
+        <div class="preloader-image"><img src="images/dapurpL.gif" alt="dapurple"></div>
     </div>
     </div>
     <!--/Preloader -->
  
     <body>
+
         Hello World!
+
     </body>
 </html>
