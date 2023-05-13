@@ -19,6 +19,8 @@ bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
 
 h1 {
     color: #974F9D;
+    font-size: 30px;
+
   }
 
   p {
@@ -35,38 +37,82 @@ h1 {
  }
 
  /* The side navigation menu */
-.sidebar {
-  margin: 0;
-  padding: 0;
-  right: -50px;
-  width: 200px;
-  background-color: #f1f1f1;
+ .content {
+  position: relative;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  right: 0 !important;
+}
+.menu__btn {
   position: fixed;
-  height: 100%;
-  overflow: auto;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
 }
-
-/* Sidebar links */
-.sidebar a {
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
   display: block;
-  color: black;
-  padding: 16px;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #974F9D;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -9px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 9px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: -65px;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ffffff;
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #974F9D;
+  font-family: 'VCR OSD Mono';
+  font-size: 30px;
+  font-weight: 600;
   text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #7b7b7b;
 }
 
-/* Active/current link */
-.sidebar a.active {
-  background-color: #954C9B;
-  color: white;
-}
-
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+/* Page content */
 div.content {
   margin-right: 200px;
   padding: 1px 16px;
@@ -95,4 +141,43 @@ div.content {
     text-align: center;
     float: none;
   }
+}
+
+#i-section {
+
+  text-align: left;
+}
+
+/* Style rules for mobile viewport */
+.mobile-nav a {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-decoration: none;
+  padding: 3%;
+  display: block;
+}
+
+
+/* Style rule show mobile class and hide tab-desk class */
+.mobile, .mobile-tablet {
+  display: block;
+}
+
+.tab-desk, .desktop, #nav-links {
+  display: none;
+}
+
+/* Style rules for header area */
+.mobile h1, .mobile h3 {
+  padding: 2%;
+  text-align: center;
+}
+
+.mobile h1 {
+  font-family: 'VCR OSD Mono';
+}
+
+.mobile h3 {
+  font-family: 'VCR OSD Mono';
 }
