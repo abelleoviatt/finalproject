@@ -31,7 +31,6 @@ h1 {
 
   
 
-
   body {
     background-color: #000;
  }
@@ -124,60 +123,49 @@ div.content {
   position: relative;
 }
 
-/* On screens less than 700px wide, make sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: right;}
-  div.content {margin-right: 0;}
-}
-
-/* On screens that less than 400px, display the sidebar vertically instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-
 #i-section {
 
   text-align: left;
 }
 
-/* Style rules for mobile viewport */
-.mobile-nav a {
-  color: #fff;
-  text-align: center;
-  font-size: 2em;
-  text-decoration: none;
-  padding: 3%;
-  display: block;
+/* Mobile viewport style rule for iPhone XR */
+@media only screen and (max-width: 414px) {
+/* Change display of hamburger menu to block */
+.hamburger-menu {
+display: block;
+right: 0;
 }
 
-
-/* Style rule show mobile class and hide tab-desk class */
-.mobile, .mobile-tablet {
-  display: block;
+/* Set the position of the menu box */
+.menu__box {
+position: fixed;
+top: 0;
+right: 0;
+height: 100%;
+width: 50%;
+max-width: 300px;
+background-color: #fff;
+padding: 80px 20px 20px;
+z-index: 10;
+transform: translateX(-100%);
+transition: transform 0.3s ease-in-out;
 }
 
-.tab-desk, .desktop, #nav-links {
-  display: none;
+.menu__btn {
+  z-index: 9999;
 }
 
-/* Style rules for header area */
-.mobile h1, .mobile h3 {
-  padding: 2%;
-  text-align: center;
+/* Show menu box when the hamburger menu is checked */
+#menu__toggle:checked ~ .menu__box {
+transform: translateX(0);
 }
 
-.mobile h1 {
-  font-family: 'VCR OSD Mono';
+/* style for menu items */
+.menu__item {
+display: block;
+font-size: 24px;
+margin: 20px 0;
+text-align: center;
 }
 
-.mobile h3 {
-  font-family: 'VCR OSD Mono';
 }
