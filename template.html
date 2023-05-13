@@ -23,52 +23,11 @@
        font-family: 'VCR OSD Mono', monospace;
      }
      
-     /* Set background color and z-index of preloader */
-     #preloader {
-       position: fixed;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background-color: #E0D0E6;
-       z-index: 999;
-       opacity: 1;
-       transition: 1s ease-out;
-     }
-     
-     /* Position the preloader image in center of screen */
-     #preloader img {
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-     }
-     
-     /* Hide all elements on page while it is loading */
-     body.loading * {
-       pointer-events: none;
-     }
-     
-     /* Show preloader but allow pointer events on it while the page is loading so gif can be downloaded/copied */
-     body.loading #preloader {
-       opacity: 1;
-       pointer-events: auto;
-     }
-     
-     /* Hide preloader but allow pointer events on all elements once page has loaded */
-     body.loaded #preloader {
-       opacity: 0;
-       pointer-events: none;
-     }
      
    </style>
  </head>
  
- <body class="loading">
-   <!-- Only display preloader on the homepage -->
-   <div id="preloader">
-     <img src="images/dapurpL.gif" alt="Loading...">
-   </div>
+
  
    <header>
      <div class="hamburger-menu">
@@ -78,10 +37,10 @@
        </label>
    
        <ul class="menu__box">
-         <li><a class="menu__item" href="#">Home</a></li>
-         <li><a class="menu__item" href="#">About</a></li>
+         <li><a class="menu__item" href="index.html">Home</a></li>
+         <li><a class="menu__item" href="about.html">About</a></li>
          <li><a class="menu__item" href="#">Pricing</a></li>
-         <li><a class="menu__item" href="#">Contact</a></li>
+         <li><a class="menu__item" href="contact.html">Contact</a></li>
          <li><a class="menu__item" href="#">Form</a></li>
        </ul>
      </div>
@@ -90,6 +49,7 @@
    <script src="script.js"></script>
  
    <!-- Main page contents -->
+   <body>
    <div class="content">
      <h1>test test test</h1>
      <p>this da template</p>

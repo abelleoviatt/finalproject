@@ -88,7 +88,7 @@ h1 {
 .menu__box {
   display: block;
   position: fixed;
-  top: -65px;
+  top: -10px;
   right: -100%;
   width: 300px;
   height: 100%;
