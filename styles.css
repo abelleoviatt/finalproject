@@ -78,7 +78,12 @@ p {
   margin-right: 6px;
 }
 
+h2 {
 
+  font-size: 20px;
+  color: #974F9D;
+  text-align: center;
+}
 
 body {
   background-color: #000;
