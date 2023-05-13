@@ -1,6 +1,6 @@
 
 /* CSS Reset */
-aside, body, footer, h1, h2, h3, header, img, main, nav, ul {
+aside, body, footer, h1, h2, h3, header, img, main, nav, p, ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,13 +20,15 @@ display: inline;
 h1 {
   color: #974F9D;
   font-size: 30px;
+  z-index: -1;
 
 }
 
 p {
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
+  z-index: -2;
 }
 
 
@@ -94,7 +96,7 @@ height: 100%;
 margin: 0;
 padding: 80px 0;
 list-style: none;
-background-color: #ffffff;
+background-color: #E0D0E6;
 transition-duration: .25s;
 }
 .menu__item {
@@ -128,52 +130,37 @@ position: relative;
 text-align: left;
 }
 
-/* Mobile viewport style rule for iPhone XR */
 @media only screen and (max-width: 300px) {
-/* Change display of hamburger menu to block */
-.hamburger-menu {
-display: none;
-right: 0;
+  
+    .menu__box {
+      display: block; 
+      right: 300px; 
+      position: absolute;
+      z-index: 999;
+  }
+
+  .menu__btn {
+    float: right; 
 }
 
-/* Set the position of the menu box */
-.menu__box {
-position: relative;
-top: 0;
-right: 0;
-height: 100%;
-width: 50%;
-max-width: 300px;
-background-color: #fff;
-padding: 80px 20px 20px;
-z-index: 10;
-transform: translateX(-100%);
-transition: transform 0.3s ease-in-out;
-}
-
-/* Show menu box when the hamburger menu is checked */
-#menu__toggle:checked ~ .menu__box {
-transform: translateX(0);
-}
-
-/* style for menu items */
 .menu__item {
-display: block;
-font-size: 24px;
-margin: 20px 0;
-text-align: right;
-}
-
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-display: block;
-position: absolute;
-width: 50%;
-height: 2px;
-background-color: #974F9D;
-transition-duration: .25s;
+  float: right; 
 
 }
+
+  /* Make header and paragraph text smaller */
+  h1, p {
+    font-size: 14px;
+  }
+
+  /* Align hamburger menu to front of page */
+  .content {
+    margin-top: 0;
+  }
+
+  header, h1, p {
+    position: relative;
+    z-index: -1;
+  }
 
 }

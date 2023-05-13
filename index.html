@@ -24,7 +24,7 @@
        font-family: 'VCR OSD Mono', monospace;
      }
      
-      /* Set background color and z-index of preloader */
+    /* Set background color and z-index of preloader */
     #preloader {
       position: fixed;
       top: 0;
@@ -61,9 +61,7 @@
       opacity: 0;
       pointer-events: none;
     }
-    
-  </style>
-
+    </style>
 <script>
   window.addEventListener('load', function () {
     setTimeout(function () {
@@ -75,9 +73,15 @@ body.classList.add("loaded");
 
  </head>
 
+ <body class="loading">
+  <!-- Only display preloader on the homepage -->
+  <div id="preloader">
+    <img src="images/dapurpL.gif" alt="Loading...">
+  </div>
   <header>
+    <h1>test test test</h1>
     <div class="hamburger-menu">
-      <input id="menu__toggle" type="checkbox" />
+      <input id="menu__toggle" type="checkbox" >
       <label class="menu__btn" for="menu__toggle">
         <span></span>
       </label>
@@ -90,18 +94,13 @@ body.classList.add("loaded");
         <li><a class="menu__item" href="form.html">Form</a></li>
       </ul>
     </div>
-
+</header>
 
   <!-- Main page contents -->
-  <body class="loading">
-    <!-- Only display preloader on the homepage -->
-    <div id="preloader">
-      <img src="images/dapurpL.gif" alt="Loading...">
-    </div>
-  <div class="content">
-    <h1>test test test</h1>
-    <p>also test but in new format</p>
-    <!--music player button-->
+ 
+  <main id="content">
+      <p>also test but in new format</p>
+         <!-- music player button-->
     <button type="button" onClick="Play()">Play|Pause</button>
     <audio controls id="audioval">
       <source src="audio/panterawalk.mp3" type="audio/mp3">
@@ -116,26 +115,6 @@ body.classList.add("loaded");
         }
       }
     </script>
-  </div>
-
-  <body>
-<section id="i-section">
-  <div id="container03" class="container default">
-      <div class="wrapper">
-          <div class="inner">
-              <p id="text04">
-                  <span class="p">
-                      <span style="color: #570071">
-                          <strong>
-                              <em>paint me a heaven of your love,</em>
-                          </strong>
-                      </span>
-                      <br/> with your bloodied mouth.
-                  </span>
-              </p>
-              <hr id="divider02">
-  </div>
-</section>
+    </main>
 </body>
-
 </html>
