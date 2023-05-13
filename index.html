@@ -50,13 +50,13 @@
       pointer-events: none;
     }
     
-    /* Show preloader but allow pointer events on it while the page is loading so gif can be downloaded/copied */
+    /* Show preloader but allow pointer events */
     body.loading #preloader {
       opacity: 1;
       pointer-events: auto;
     }
     
-    /* Hide preloader but allow pointer events on all elements once page has loaded */
+    /* Hide preloader but allow pointer events on all elements have loaded */
     body.loaded #preloader {
       opacity: 0;
       pointer-events: none;
@@ -78,8 +78,11 @@ body.classList.add("loaded");
   <div id="preloader">
     <img src="images/dapurpL.gif" alt="Loading...">
   </div>
-  <header>
-    <h1>test test test</h1>
+  <header class="site-header">
+    <div class="site-identity">
+      <a href="#"><img src="images/faviconblock1.png" alt="Andrea Oviatt Portfolio" /></a>
+      <h1><a href="#">https://vwebtech.tmcc.edu/courses/cit-151-3001/Andrea_Oviatt/</a></h1>
+    </div> 
     <div class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" >
       <label class="menu__btn" for="menu__toggle">
@@ -94,27 +97,51 @@ body.classList.add("loaded");
         <li><a class="menu__item" href="form.html">Form</a></li>
       </ul>
     </div>
+
+    
+
+      </nav>
+    </header>
+
 </header>
 
   <!-- Main page contents -->
  
   <main id="content">
-      <p>also test but in new format</p>
-         <!-- music player button-->
-    <button type="button" onClick="Play()">Play|Pause</button>
-    <audio controls id="audioval">
-      <source src="audio/panterawalk.mp3" type="audio/mp3">
-    </audio>
-    <script type="text/javascript">
-      function Play() {
-        var myAudio = document.getElementById("audioval");
-        if (myAudio.paused) {
-          myAudio.play();
-        } else {
-          myAudio.pause();
-        }
-      }
-    </script>
+      <p>Portfolio Homepage</p>
+
+<div style="text-align: left">
+  <a href="https://mothcpu.neocities.org/dect/story"target="_blank"><img src="images/ultrapic.png" alt="ULTRAKILL fanart by Andrea O" width="20%"></a>
+<figcaption>CLICK IMAGE FOR THE STORY THIS ART WAS INSPIRED BY</figcaption>
+</div>
+
+<div style="text-align: right">
+<img src="images/ghostpic.png"alt="Ghost the Band by Andrea O" width="20%">
+<figcaption>SECOND SAMPLE OF ART</figcaption>
+</div>
+
+<img src="images/artpic.png"alt="personal art by Andrea O" width="20%">
+<figcaption>THIRD SAMPLE OF ART</figcaption>
+
+
     </main>
 </body>
+
+<footer>
+  <!-- music player button-->
+  <button type="button" onClick="Play()">Play|Pause</button>
+  <audio controls id="audioval">
+    <source src="audio/lastblink.mp3" type="audio/mp3">
+  </audio>
+  <script type="text/javascript">
+    function Play() {
+      var myAudio = document.getElementById("audioval");
+      if (myAudio.paused) {
+        myAudio.play();
+      } else {
+        myAudio.pause();
+      }
+    }
+  </script>
+</footer>
 </html>
