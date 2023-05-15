@@ -16,14 +16,6 @@
    <link rel="icon" type="image/png" href="images/faviconblock1.png">
    <title>Home</title>
    <style>
-     @font-face {
-       font-family: 'VCR OSD Mono';
-       src: url('font/VCR_OSD_MONO_1.001.ttf') format('truetype');
-     }
-     
-     body {
-       font-family: 'VCR OSD Mono', monospace;
-     }
      
     /* Set background color and z-index of preloader */
     #preloader {
@@ -82,7 +74,7 @@ body.classList.add("loaded");
   <header class="site-header">
     <div class="site-identity">
       <a href="#"><img src="images/faviconblock1.png" alt="Andrea Oviatt Portfolio" /></a>
-      <h1><a href="#">https://vwebtech.tmcc.edu/courses/cit-151-3001/Andrea_Oviatt/</a></h1>
+      <h1 style="font-size: 30px"><a href="https://vwebtech.tmcc.edu/courses/cit-151-3001/Andrea_Oviatt/"></a></h1>
     </div> 
     <div class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" >
@@ -109,36 +101,48 @@ body.classList.add("loaded");
   <!-- Main page contents -->
  
   <main id="content">
-      <p>Portfolio Homepage</p>
+      <p>Portfolio Homepage</p> <br>
 
 
 <h2> *FOR BEST USER EXPERIENCE PLAY MP3 WHILE VIEWING ALL TABS AFTER OPENING EACH ONE AS A NEW PAGE* </h2>
-<h2> *THANKS FOR BEING A SUPPORTIVE FRIEND NOAH YOU ARE VERY COOL* </h2>
-
+<h2> * HAPPY MOTHERS DAY MOMMY :) * </h2>
 
 <div style="text-align: left">
   <a href="https://mothcpu.neocities.org/dect/story"target="_blank"><img src="images/ultrapic.png" alt="ULTRAKILL fanart by Andrea O" width="20%"></a>
-<figcaption>CLICK IMAGE FOR THE STORY THIS ART WAS INSPIRED BY</figcaption>
+<figcaption> <- CLICK IMAGE FOR THE STORY THIS ART WAS INSPIRED BY</figcaption>
 </div>
+
 
 <div style="text-align: right">
-<img src="images/ghostpic.png"alt="Ghost the Band by Andrea O" width="20%">
-<figcaption>SECOND SAMPLE OF ART</figcaption>
+<img style= "float: right" src="images/ghostpic.png"alt="Ghost the Band by Andrea O"width="20%">
+<br><br><figcaption>SECOND SAMPLE OF ART</figcaption>
 </div>
 
-<img src="images/artpic.png"alt="personal art by Andrea O" width="20%">
-<figcaption>THIRD SAMPLE OF ART</figcaption>
+
+<img src="images/artpic.png"alt="personal art by Andrea O" width="20%"> 
+<figcaption style="text-align: left"> THIRD SAMPLE OF ART <br><br></figcaption>
 
 
     </main>
 </body>
 
 <footer>
+    <p>Author: Andrea Oviatt<br>
+    <a href="mailto:andrea_oviatt@mail.tmcc.edu">andrea_oviatt@mail.tmcc.edu</a></p>
   <!-- music player button-->
-  <button type="button" onClick="Play()">Play|Pause</button>
+  <div class="text-center">
+  <button type="button" onClick="Play()">Play / Pause Website Theme Music </button><br><br>
   <audio controls id="audioval">
     <source src="audio/lastblink.mp3" type="audio/mp3">
   </audio>
+  <script>
+    const audioPlayer = document.querySelector("audio");
+
+if (audioPlayer) { /* if  audio player exists */
+  audioPlayer.style.display = "none"; /* hide audio player */
+}
+
+  </script>
   <script type="text/javascript">
     function Play() {
       var myAudio = document.getElementById("audioval");
@@ -149,5 +153,6 @@ body.classList.add("loaded");
       }
     }
   </script>
+  </div>
 </footer>
 </html>

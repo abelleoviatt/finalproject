@@ -17,22 +17,58 @@ bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
 display: inline;
 }
 
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('font/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BroshKill-Regular';
+  src: url('font/BroshKill-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AnonymousPro';
+  src: url('font/AnonymousPro.ttf') format('truetype');
+}
+
 h1 {
   color: #974F9D;
-  font-size: 30px;
+  font-size: 45px;
   z-index: -1;
-  padding-top: 2px;
+  padding-top: 34px;
+  font-family: 'BroshKill-Regular';
+  font-weight: 100;
+  margin-left: 5px;
 
 }
 
+title {
+
+  font-family: 'BroshKill-Regular';
+}
+
+footer {
+  text-align: center;
+font-size: 30px;
+  font-family: 'AnonymousPro';
+}
+
+/*image and img rules */
+
+
 img {
 
-  padding: 20px; 
+  padding: 30px; 
+}
+
+body {
+  font-family: 'VCR OSD Mono', monospace;
 }
 
 figcaption {
 
-  font-size: 30px;
+  font-size: 26px;
   text-decoration: underline;
   font-family: 'VCR OSD Mono';
   color: #E0D0E6;
@@ -50,6 +86,11 @@ figcaption {
   content: "";
   display: table;
   clear: both;
+}
+
+title {
+  font-family: 'BroshKill-Regular';
+
 }
 
 .site-identity {
@@ -83,6 +124,7 @@ h2 {
   font-size: 20px;
   color: #974F9D;
   text-align: center;
+  line-height: 25px;
 }
 
 body {
@@ -240,4 +282,10 @@ td {
   font-size: 20px;
   color: rgb(255, 0, 230)fff;
 
+}
+
+/*button styles*/
+
+.text-center {
+  text-align: center;
 }
