@@ -247,6 +247,11 @@ text-align: left;
     font-size: 14px;
   }
 
+  footer {
+
+    font-size: 14px;
+  }
+
   /* Align hamburger menu to front of page */
   .content {
     margin-top: 0;
