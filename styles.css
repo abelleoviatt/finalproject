@@ -294,3 +294,16 @@ td {
 .text-center {
   text-align: center;
 }
+
+button {
+  transition-duration: 0.4s;
+  background-color: #E0D0E6;
+  color: #974F9D;
+  font-family: 'VCR OSD Mono';
+  padding: 5px 14px;
+}
+
+.button:hover {
+  background-color: #974F9D; /* Purple */
+  color: #ffffff;
+}
