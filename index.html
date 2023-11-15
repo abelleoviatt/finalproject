@@ -58,31 +58,34 @@
       pointer-events: none;
     }
     </style>
-<script>
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-var body = document.getElementsByTagName("body")[0];
-body.classList.remove("loading");
-body.classList.add("loaded");
-}, 1500); })
-</script>
 
- </head>
+    <script>
+      window.addEventListener('load', function () {
+      setTimeout(function () {
+      var body = document.getElementsByTagName("body")[0];
+      body.classList.remove("loading");
+      body.classList.add("loaded");
+      }, 1500); })
+    </script>
+  </head>
 
- <body class="loading">
-  <!-- Only display preloader on the homepage -->
-  <div id="preloader">
+<body class="loading">
+    <!-- Only display preloader on the homepage -->
+    <div id="preloader">
     <img src="images/dapurpL.gif" alt="Loading...">
-  </div>
-  <header class="site-header">
-    <div class="site-identity">
+    </div>
+
+    <header class="site-header">
+  
+      <div class="site-identity">
       <a href="#"><img src="images/faviconblock1.png" alt="Andrea Oviatt Portfolio" /></a>
       <h1 style="font-size: 30px"><a href="https://vwebtech.tmcc.edu/courses/cit-151-3001/Andrea_Oviatt/"></a></h1>
-    </div> 
-    <div class="hamburger-menu">
+      </div>
+
+      <div class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" >
       <label class="menu__btn" for="menu__toggle">
-        <span></span>
+      <span></span>
       </label>
   
       <ul class="menu__box">
@@ -92,29 +95,25 @@ body.classList.add("loaded");
         <li><a class="menu__item" href="contact.html">Contact</a></li>
         <li><a class="menu__item" href="form.html">Form</a></li>
       </ul>
-    </div>
+      </div>
 
     
 
       </nav>
     </header>
-
-</header>
-
-  <!-- Main page contents -->
+  
+    <!-- Main page contents -->
  
-  <main id="content">
-      <p>Portfolio Homepage</p> <br>
+    <main id="content">
+    <p>Portfolio Homepage</p> <br>
+    <div style="text-align: right">
+    <img style= "float: right" src="images/ghostpic.png"alt="Ghost the Band by Andrea O"width="20%">
+    <br><br><figcaption>FIRST SAMPLE OF ART</figcaption>
+    </div>
 
 
-<div style="text-align: right">
-<img style= "float: right" src="images/ghostpic.png"alt="Ghost the Band by Andrea O"width="20%">
-<br><br><figcaption>FIRST SAMPLE OF ART</figcaption>
-</div>
-
-
-<img src="images/artpic.png"alt="personal art by Andrea O" width="20%"> 
-<figcaption style="text-align: left"> SECOND SAMPLE OF ART <br><br><br></figcaption>
+    <img src="images/artpic.png"alt="personal art by Andrea O" width="20%"> 
+    <figcaption style="text-align: left"> SECOND SAMPLE OF ART <br><br><br></figcaption>
 
 
     </main>
@@ -122,31 +121,33 @@ body.classList.add("loaded");
 
 <footer>
   <p style="font-size:18px">Author: Andrea Oviatt<br>
-    <a href="mailto:andrea_oviatt@mail.tmcc.edu">andrea_oviatt@mail.tmcc.edu</a></p>
+  <a href="mailto:andrea_oviatt@mail.tmcc.edu">andrea_oviatt@mail.tmcc.edu</a></p>
+  
   <!-- music player button-->
   <div class="text-center">
-  <button type="button" onClick="Play()">Play / Pause Website Theme: Last Blink by World's End Girlfriend</button><br><br>
-  <audio controls id="audioval">
+    <button type="button" onClick="Play()">Play / Pause Website Theme: Last Blink by World's End Girlfriend</button><br><br>
+    <audio controls id="audioval">
     <source src="audio/lastblink.mp3" type="audio/mp3">
-  </audio>
-  <script>
+    </audio>
+    <script>
     const audioPlayer = document.querySelector("audio");
 
-if (audioPlayer) { /* if  audio player exists */
-  audioPlayer.style.display = "none"; /* hide audio player */
-}
+    if (audioPlayer) { /* if  audio player exists */
+    audioPlayer.style.display = "none"; /* hide audio player */
+    }
 
-  </script>
-  <script type="text/javascript">
-    function Play() {
+    </script>
+     <script type="text/javascript">
+      function Play() {
       var myAudio = document.getElementById("audioval");
       if (myAudio.paused) {
         myAudio.play();
       } else {
         myAudio.pause();
       }
-    }
-  </script>
+      }
+    </script>
   </div>
 </footer>
+
 </html>
